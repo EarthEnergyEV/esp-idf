@@ -60,10 +60,6 @@ entries:
 entries:
     .wifirxiram+
 
-[sections:phy_iram]
-entries:
-    .phyiram+
-
 [scheme:default]
 entries:
     if APP_BUILD_USE_FLASH_SECTIONS = y:
@@ -85,7 +81,6 @@ entries:
     rtc_bss -> rtc_bss
     wifi_iram -> flash_text
     wifi_rx_iram -> flash_text
-    phy_iram -> flash_text
 
 [scheme:rtc]
 entries:
@@ -115,7 +110,3 @@ entries:
 [scheme:wifi_rx_iram]
 entries:
     wifi_rx_iram -> iram0_text
-
-[scheme:phy_iram]
-entries:
-    phy_iram -> iram0_text
